@@ -1,0 +1,16 @@
+<app-loading [loading]="loading"></app-loading>
+
+<div class="episode-container">
+  <h1 class="ep-name">{{ episode.name }}</h1>
+  <div class="episode">
+    Temporada {{ episode.episode | season }} Episódio
+    {{ episode.episode | episode }}
+  </div>
+  <div class="air-date">Data de Transmissão: {{ episode.air_date | date }}</div>
+  <div class="characters">
+    <h2>Personagens nesse Episódio</h2>
+    <div class="characters-container">
+      <app-character *ngFor="let character of characters" [character]="character"></app-character>
+    </div>
+  </div>
+</div>

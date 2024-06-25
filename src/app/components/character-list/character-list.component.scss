@@ -1,0 +1,32 @@
+.characters-container {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1920px;
+  margin-bottom: 2em;
+  flex-direction: row;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 7em;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.page-item:not(.disabled) {
+  cursor: pointer;
+
+  a {
+    color: #333;
+    background-color: #35c9dd;
+  }
+}
