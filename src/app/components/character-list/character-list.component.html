@@ -7,6 +7,10 @@
 
 <app-notfound [visible]="notFound"></app-notfound>
 
+<div class="characters-container" *ngIf="!loading && !notFound">
+  <app-character *ngFor="let item of characters" [character]="item"></app-character>
+</div>
+
 <div class="pagination-container" *ngIf="!loading && !notFound">
   <nav aria-label="Page navigation example">
     <ul class="pagination">
@@ -21,8 +25,4 @@
       </li>
     </ul>
   </nav>
-</div>
-
-<div class="characters-container" *ngIf="!loading && !notFound">
-  <app-character *ngFor="let item of characters" [character]="item"></app-character>
 </div>
